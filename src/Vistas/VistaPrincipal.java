@@ -16,6 +16,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
      */
     public VistaPrincipal() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -28,64 +29,64 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        lb_tituloPrincipal = new javax.swing.JLabel();
+        btn_algoritmoPrincipal = new javax.swing.JButton();
+        btn_congruenciaPrincipal = new javax.swing.JButton();
+        btn_cribaPrincipal = new javax.swing.JButton();
+        btn_entropiaPrincipal = new javax.swing.JButton();
+        btn_exponenciacionPrincipal = new javax.swing.JButton();
+        btn_minimoPrincipal = new javax.swing.JButton();
+        btn_acercaPrincipal = new javax.swing.JButton();
+        btn_salirPrincipal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(52, 152, 219));
 
-        jLabel1.setFont(new java.awt.Font("BSD I Believe In Love", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel1.setText("Criptografia");
+        lb_tituloPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 48)); // NOI18N
+        lb_tituloPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        lb_tituloPrincipal.setText("Criptografia");
 
-        jButton1.setBackground(new java.awt.Color(243, 156, 18));
-        jButton1.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(240, 240, 240));
-        jButton1.setText("Algoritmo Extendido de Euler");
+        btn_algoritmoPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_algoritmoPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_algoritmoPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_algoritmoPrincipal.setText("Algoritmo Extendido de Euler");
 
-        jButton2.setBackground(new java.awt.Color(243, 156, 18));
-        jButton2.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(240, 240, 240));
-        jButton2.setText("Congruencia");
+        btn_congruenciaPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_congruenciaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_congruenciaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_congruenciaPrincipal.setText("Congruencia");
 
-        jButton3.setBackground(new java.awt.Color(243, 156, 18));
-        jButton3.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(240, 240, 240));
-        jButton3.setText("Criba de Erastotenes");
+        btn_cribaPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_cribaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_cribaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_cribaPrincipal.setText("Criba de Erastotenes");
 
-        jButton4.setBackground(new java.awt.Color(243, 156, 18));
-        jButton4.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(240, 240, 240));
-        jButton4.setText("Entropia de Shannon");
+        btn_entropiaPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_entropiaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_entropiaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_entropiaPrincipal.setText("Entropia de Shannon");
 
-        jButton5.setBackground(new java.awt.Color(243, 156, 18));
-        jButton5.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(240, 240, 240));
-        jButton5.setText("Exponenciacion Modular");
+        btn_exponenciacionPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_exponenciacionPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_exponenciacionPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_exponenciacionPrincipal.setText("Exponenciacion Modular");
 
-        jButton6.setBackground(new java.awt.Color(243, 156, 18));
-        jButton6.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(240, 240, 240));
-        jButton6.setText("Minimo Comun Divisor (M.C.D.)");
+        btn_minimoPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_minimoPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_minimoPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_minimoPrincipal.setText("Minimo Comun Divisor (M.C.D.)");
 
-        jButton7.setBackground(new java.awt.Color(243, 156, 18));
-        jButton7.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(240, 240, 240));
-        jButton7.setText("acerca de...");
+        btn_acercaPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_acercaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_acercaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_acercaPrincipal.setText("acerca de...");
 
-        jButton8.setBackground(new java.awt.Color(243, 156, 18));
-        jButton8.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(240, 240, 240));
-        jButton8.setText("salir");
+        btn_salirPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_salirPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_salirPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_salirPrincipal.setText("salir");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -95,55 +96,55 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(465, 465, 465)
-                        .addComponent(jButton2))
+                        .addComponent(btn_congruenciaPrincipal))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(413, 413, 413)
-                        .addComponent(jButton5))
+                        .addComponent(btn_exponenciacionPrincipal))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(379, 379, 379)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
+                            .addComponent(lb_tituloPrincipal)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton1)
+                                .addComponent(btn_algoritmoPrincipal)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGap(40, 40, 40)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jButton4)
-                                        .addComponent(jButton3)))))))
+                                        .addComponent(btn_entropiaPrincipal)
+                                        .addComponent(btn_cribaPrincipal)))))))
                 .addContainerGap(392, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton6)
+                        .addComponent(btn_minimoPrincipal)
                         .addGap(379, 379, 379))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton7)
+                        .addComponent(btn_acercaPrincipal)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton8)
+                        .addComponent(btn_salirPrincipal)
                         .addGap(26, 26, 26))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lb_tituloPrincipal)
                 .addGap(30, 30, 30)
-                .addComponent(jButton1)
+                .addComponent(btn_algoritmoPrincipal)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btn_congruenciaPrincipal)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(btn_cribaPrincipal)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(btn_entropiaPrincipal)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(btn_exponenciacionPrincipal)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(btn_minimoPrincipal)
                 .addGap(73, 73, 73)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
-                    .addComponent(jButton7))
+                    .addComponent(btn_salirPrincipal)
+                    .addComponent(btn_acercaPrincipal))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -201,15 +202,15 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btn_acercaPrincipal;
+    private javax.swing.JButton btn_algoritmoPrincipal;
+    private javax.swing.JButton btn_congruenciaPrincipal;
+    private javax.swing.JButton btn_cribaPrincipal;
+    private javax.swing.JButton btn_entropiaPrincipal;
+    private javax.swing.JButton btn_exponenciacionPrincipal;
+    private javax.swing.JButton btn_minimoPrincipal;
+    private javax.swing.JButton btn_salirPrincipal;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lb_tituloPrincipal;
     // End of variables declaration//GEN-END:variables
 }

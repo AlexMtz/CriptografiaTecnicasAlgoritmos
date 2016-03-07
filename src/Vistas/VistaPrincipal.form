@@ -54,23 +54,23 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="465" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_congruenciaPrincipal" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="413" max="-2" attributes="0"/>
-                          <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_exponenciacionPrincipal" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="379" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lb_tituloPrincipal" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn_algoritmoPrincipal" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn_entropiaPrincipal" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn_cribaPrincipal" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -83,13 +83,13 @@
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_minimoPrincipal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="379" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_acercaPrincipal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButton8" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_salirPrincipal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -100,23 +100,23 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lb_tituloPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_algoritmoPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_congruenciaPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_cribaPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_entropiaPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_exponenciacionPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_minimoPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_salirPrincipal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_acercaPrincipal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="16" max="32767" attributes="0"/>
               </Group>
@@ -124,7 +124,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lb_tituloPrincipal">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="BSD I Believe In Love" size="48" style="1"/>
@@ -135,7 +135,7 @@
             <Property name="text" type="java.lang.String" value="Criptografia"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btn_algoritmoPrincipal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="12" green="9c" red="f3" type="rgb"/>
@@ -149,7 +149,7 @@
             <Property name="text" type="java.lang.String" value="Algoritmo Extendido de Euler"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btn_congruenciaPrincipal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="12" green="9c" red="f3" type="rgb"/>
@@ -163,7 +163,7 @@
             <Property name="text" type="java.lang.String" value="Congruencia"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="btn_cribaPrincipal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="12" green="9c" red="f3" type="rgb"/>
@@ -177,7 +177,7 @@
             <Property name="text" type="java.lang.String" value="Criba de Erastotenes"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="btn_entropiaPrincipal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="12" green="9c" red="f3" type="rgb"/>
@@ -191,7 +191,7 @@
             <Property name="text" type="java.lang.String" value="Entropia de Shannon"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="btn_exponenciacionPrincipal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="12" green="9c" red="f3" type="rgb"/>
@@ -205,7 +205,7 @@
             <Property name="text" type="java.lang.String" value="Exponenciacion Modular"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="btn_minimoPrincipal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="12" green="9c" red="f3" type="rgb"/>
@@ -219,7 +219,7 @@
             <Property name="text" type="java.lang.String" value="Minimo Comun Divisor (M.C.D.)"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="btn_acercaPrincipal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="12" green="9c" red="f3" type="rgb"/>
@@ -233,7 +233,7 @@
             <Property name="text" type="java.lang.String" value="acerca de..."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton8">
+        <Component class="javax.swing.JButton" name="btn_salirPrincipal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="12" green="9c" red="f3" type="rgb"/>
