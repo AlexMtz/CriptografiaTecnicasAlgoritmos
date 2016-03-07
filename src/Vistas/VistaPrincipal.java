@@ -26,6 +26,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         btn_cribaPrincipal.addActionListener(controlador);
         btn_entropiaPrincipal.addActionListener(controlador);
         btn_minimoPrincipal.addActionListener(controlador);
+        setFonts();
     }
 
     /**
@@ -222,4 +223,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lb_tituloPrincipal;
     // End of variables declaration//GEN-END:variables
+
+    private void setFonts() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
