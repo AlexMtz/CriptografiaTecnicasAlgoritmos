@@ -5,11 +5,15 @@
  */
 package Vistas;
 
+import Controladores.ControladorVistaPrincipal;
+
 /**
  *
- * @author ALEX
+ * @author Yonathan A. Martínez Padilla
  */
 public class VistaPrincipal extends javax.swing.JFrame {
+    private ControladorVistaPrincipal controlador = 
+            new ControladorVistaPrincipal(this);
 
     /**
      * Creates new form VistaPrincipal
@@ -17,6 +21,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
     public VistaPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        btn_algoritmoPrincipal.addActionListener(controlador);
+        btn_congruenciaPrincipal.addActionListener(controlador);
+        btn_cribaPrincipal.addActionListener(controlador);
+        btn_entropiaPrincipal.addActionListener(controlador);
+        btn_minimoPrincipal.addActionListener(controlador);
     }
 
     /**
