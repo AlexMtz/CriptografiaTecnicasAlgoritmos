@@ -6,6 +6,7 @@
 package Vistas;
 
 import Controladores.ControladorVistaPrincipal;
+import Recursos.fuentes.FontBSD;
 
 /**
  *
@@ -21,12 +22,12 @@ public class VistaPrincipal extends javax.swing.JFrame {
     public VistaPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setFonts();
         btn_algoritmoPrincipal.addActionListener(controlador);
         btn_congruenciaPrincipal.addActionListener(controlador);
         btn_cribaPrincipal.addActionListener(controlador);
         btn_entropiaPrincipal.addActionListener(controlador);
         btn_minimoPrincipal.addActionListener(controlador);
-        setFonts();
     }
 
     /**
@@ -225,6 +226,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void setFonts() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FontBSD fonts = new FontBSD();
+        lb_tituloPrincipal.setFont(fonts.getMyFont(1, 48));
+        btn_algoritmoPrincipal.setFont(fonts.getMyFont(1, 18));
+        btn_congruenciaPrincipal.setFont(fonts.getMyFont(1, 18));
+        btn_cribaPrincipal.setFont(fonts.getMyFont(1, 18));
+        btn_entropiaPrincipal.setFont(fonts.getMyFont(1, 18));
+        btn_exponenciacionPrincipal.setFont(fonts.getMyFont(1, 18));
+        btn_minimoPrincipal.setFont(fonts.getMyFont(1, 18));
     }
 }
