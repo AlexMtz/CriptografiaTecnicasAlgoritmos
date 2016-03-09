@@ -5,6 +5,8 @@
  */
 package Vistas;
 
+import Recursos.fuentes.FontBSD;
+
 /**
  *
  * @author ALEX
@@ -16,6 +18,8 @@ public class VistaExponenciacion extends javax.swing.JFrame {
      */
     public VistaExponenciacion() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        setFonts();
     }
 
     /**
@@ -27,17 +31,181 @@ public class VistaExponenciacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        lb_tituloExponenciacion = new javax.swing.JLabel();
+        lb_baseExponenciacion = new javax.swing.JLabel();
+        txt_baseExponenciacion = new javax.swing.JTextField();
+        lb_exponenteExponenciacion = new javax.swing.JLabel();
+        txt_exponenciacionExponenciacion = new javax.swing.JTextField();
+        lb_moduloExponenciacion = new javax.swing.JLabel();
+        txt_moduloExponenciacion = new javax.swing.JTextField();
+        btn_calcularExponenciacion = new javax.swing.JButton();
+        rdnbtn_clasicoExponenciacion = new javax.swing.JRadioButton();
+        rdnbtn_binarioExponenciacion = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txt_solucionExponenciacion = new javax.swing.JTextArea();
+        lb_infoExponenciacion = new javax.swing.JLabel();
+        btn_ayudaExponenciacion = new javax.swing.JButton();
+        btn_limpiarExponenciacion = new javax.swing.JButton();
+        btn_regresarExponenciacion = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(52, 152, 219));
+
+        lb_tituloExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 48)); // NOI18N
+        lb_tituloExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        lb_tituloExponenciacion.setText("Exponenciacion");
+
+        lb_baseExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_baseExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        lb_baseExponenciacion.setText("base:");
+
+        txt_baseExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        txt_baseExponenciacion.setText("###");
+
+        lb_exponenteExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_exponenteExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        lb_exponenteExponenciacion.setText("exponente:");
+
+        txt_exponenciacionExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        txt_exponenciacionExponenciacion.setText("###");
+
+        lb_moduloExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_moduloExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        lb_moduloExponenciacion.setText("modulo:");
+
+        txt_moduloExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        txt_moduloExponenciacion.setText("###");
+
+        btn_calcularExponenciacion.setBackground(new java.awt.Color(243, 156, 18));
+        btn_calcularExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_calcularExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        btn_calcularExponenciacion.setText("calcular");
+
+        rdnbtn_clasicoExponenciacion.setBackground(new java.awt.Color(52, 152, 219));
+        rdnbtn_clasicoExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        rdnbtn_clasicoExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        rdnbtn_clasicoExponenciacion.setText("metodo clasico:");
+
+        rdnbtn_binarioExponenciacion.setBackground(new java.awt.Color(52, 152, 219));
+        rdnbtn_binarioExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        rdnbtn_binarioExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        rdnbtn_binarioExponenciacion.setText("metodo rapido (binario)");
+
+        txt_solucionExponenciacion.setColumns(20);
+        txt_solucionExponenciacion.setRows(5);
+        jScrollPane1.setViewportView(txt_solucionExponenciacion);
+
+        lb_infoExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_infoExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        lb_infoExponenciacion.setText("Info:");
+
+        btn_ayudaExponenciacion.setBackground(new java.awt.Color(243, 156, 18));
+        btn_ayudaExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_ayudaExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        btn_ayudaExponenciacion.setText("ayuda");
+
+        btn_limpiarExponenciacion.setBackground(new java.awt.Color(243, 156, 18));
+        btn_limpiarExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_limpiarExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        btn_limpiarExponenciacion.setText("limpiar campos");
+
+        btn_regresarExponenciacion.setBackground(new java.awt.Color(243, 156, 18));
+        btn_regresarExponenciacion.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_regresarExponenciacion.setForeground(new java.awt.Color(240, 240, 240));
+        btn_regresarExponenciacion.setText("regresar");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(287, 287, 287)
+                        .addComponent(lb_tituloExponenciacion))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(306, 306, 306)
+                        .addComponent(rdnbtn_clasicoExponenciacion)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdnbtn_binarioExponenciacion))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(427, 427, 427)
+                        .addComponent(btn_calcularExponenciacion))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lb_infoExponenciacion))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_regresarExponenciacion)
+                            .addGap(18, 18, 18)
+                            .addComponent(btn_limpiarExponenciacion)
+                            .addGap(30, 30, 30)
+                            .addComponent(btn_ayudaExponenciacion))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addGap(81, 81, 81)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(lb_baseExponenciacion)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txt_baseExponenciacion, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lb_exponenteExponenciacion)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txt_exponenciacionExponenciacion, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lb_moduloExponenciacion)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txt_moduloExponenciacion, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(165, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lb_tituloExponenciacion)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lb_baseExponenciacion)
+                    .addComponent(txt_baseExponenciacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb_exponenteExponenciacion)
+                    .addComponent(txt_exponenciacionExponenciacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb_moduloExponenciacion)
+                    .addComponent(txt_moduloExponenciacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rdnbtn_clasicoExponenciacion)
+                    .addComponent(rdnbtn_binarioExponenciacion))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_calcularExponenciacion)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_limpiarExponenciacion)
+                    .addComponent(btn_ayudaExponenciacion)
+                    .addComponent(btn_regresarExponenciacion))
+                .addGap(18, 18, 18)
+                .addComponent(lb_infoExponenciacion)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +247,39 @@ public class VistaExponenciacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_ayudaExponenciacion;
+    private javax.swing.JButton btn_calcularExponenciacion;
+    private javax.swing.JButton btn_limpiarExponenciacion;
+    private javax.swing.JButton btn_regresarExponenciacion;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lb_baseExponenciacion;
+    private javax.swing.JLabel lb_exponenteExponenciacion;
+    private javax.swing.JLabel lb_infoExponenciacion;
+    private javax.swing.JLabel lb_moduloExponenciacion;
+    private javax.swing.JLabel lb_tituloExponenciacion;
+    private javax.swing.JRadioButton rdnbtn_binarioExponenciacion;
+    private javax.swing.JRadioButton rdnbtn_clasicoExponenciacion;
+    private javax.swing.JTextField txt_baseExponenciacion;
+    private javax.swing.JTextField txt_exponenciacionExponenciacion;
+    private javax.swing.JTextField txt_moduloExponenciacion;
+    private javax.swing.JTextArea txt_solucionExponenciacion;
     // End of variables declaration//GEN-END:variables
+
+    private void setFonts() {
+        FontBSD fonts = new FontBSD();
+        lb_tituloExponenciacion.setFont(fonts.getMyFont(1, 48));
+        lb_baseExponenciacion.setFont(fonts.getMyFont(1, 18));
+        lb_exponenteExponenciacion.setFont(fonts.getMyFont(1, 18));
+        lb_moduloExponenciacion.setFont(fonts.getMyFont(1, 18));
+        lb_infoExponenciacion.setFont(fonts.getMyFont(1, 14));
+        txt_baseExponenciacion.setFont(fonts.getMyFont(1, 18));
+        txt_exponenciacionExponenciacion.setFont(fonts.getMyFont(1, 18));
+        txt_moduloExponenciacion.setFont(fonts.getMyFont(1, 18));
+        txt_solucionExponenciacion.setFont(fonts.getMyFont(1, 18));
+        btn_calcularExponenciacion.setFont(fonts.getMyFont(1, 18));
+        btn_regresarExponenciacion.setFont(fonts.getMyFont(1, 18));
+        btn_limpiarExponenciacion.setFont(fonts.getMyFont(1, 18));
+        btn_ayudaExponenciacion.setFont(fonts.getMyFont(1, 18));
+    }
 }
