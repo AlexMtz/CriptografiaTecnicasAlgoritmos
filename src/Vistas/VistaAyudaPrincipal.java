@@ -5,6 +5,8 @@
  */
 package Vistas;
 
+import Recursos.fuentes.FontBSD;
+
 /**
  *
  * @author ALEX
@@ -16,6 +18,8 @@ public class VistaAyudaPrincipal extends javax.swing.JFrame {
      */
     public VistaAyudaPrincipal() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        setFonts();
     }
 
     /**
@@ -27,17 +31,120 @@ public class VistaAyudaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        lb_tituloAyudaPrincipal = new javax.swing.JLabel();
+        lb_autorAyudaPrincipal = new javax.swing.JLabel();
+        lb_fechaAyudaPrincipal = new javax.swing.JLabel();
+        lb_versionAyudaPrincipal = new javax.swing.JLabel();
+        lb_lenguajeAyudaPrincipal = new javax.swing.JLabel();
+        lb_softwareAyudaPrincipal = new javax.swing.JLabel();
+        btn_cerrarAyudaPrincipal = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/imagenes/SAM_0748.JPG"))); // NOI18N
+
+        lb_tituloAyudaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 24)); // NOI18N
+        lb_tituloAyudaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        lb_tituloAyudaPrincipal.setText("Programa creado por:");
+
+        lb_autorAyudaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_autorAyudaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        lb_autorAyudaPrincipal.setText("Autor: Yonathan A. Mtz. Padilla");
+
+        lb_fechaAyudaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_fechaAyudaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        lb_fechaAyudaPrincipal.setText("Fecha: 10 de Marzo del 2016");
+
+        lb_versionAyudaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_versionAyudaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        lb_versionAyudaPrincipal.setText("Version: 2.0");
+
+        lb_lenguajeAyudaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_lenguajeAyudaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        lb_lenguajeAyudaPrincipal.setText("Lenguaje: JAVA SE");
+
+        lb_softwareAyudaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_softwareAyudaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        lb_softwareAyudaPrincipal.setText("Ingenieria de Software U.A.Z.");
+
+        btn_cerrarAyudaPrincipal.setBackground(new java.awt.Color(243, 156, 18));
+        btn_cerrarAyudaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_cerrarAyudaPrincipal.setForeground(new java.awt.Color(240, 240, 240));
+        btn_cerrarAyudaPrincipal.setText("cerrar");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lb_autorAyudaPrincipal)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(8, 8, 8)
+                            .addComponent(lb_tituloAyudaPrincipal))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(8, 8, 8)
+                            .addComponent(lb_fechaAyudaPrincipal))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(83, 83, 83)
+                            .addComponent(lb_versionAyudaPrincipal))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(60, 60, 60)
+                            .addComponent(lb_lenguajeAyudaPrincipal))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(8, 8, 8)
+                            .addComponent(lb_softwareAyudaPrincipal))))
+                .addGap(137, 137, 137))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_cerrarAyudaPrincipal)
+                .addGap(418, 418, 418))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lb_tituloAyudaPrincipal)
+                        .addGap(18, 18, 18)
+                        .addComponent(lb_autorAyudaPrincipal)
+                        .addGap(18, 18, 18)
+                        .addComponent(lb_fechaAyudaPrincipal)
+                        .addGap(18, 18, 18)
+                        .addComponent(lb_versionAyudaPrincipal)
+                        .addGap(18, 18, 18)
+                        .addComponent(lb_lenguajeAyudaPrincipal)
+                        .addGap(18, 18, 18)
+                        .addComponent(lb_softwareAyudaPrincipal)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addComponent(btn_cerrarAyudaPrincipal)
+                .addGap(36, 36, 36))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +186,25 @@ public class VistaAyudaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cerrarAyudaPrincipal;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lb_autorAyudaPrincipal;
+    private javax.swing.JLabel lb_fechaAyudaPrincipal;
+    private javax.swing.JLabel lb_lenguajeAyudaPrincipal;
+    private javax.swing.JLabel lb_softwareAyudaPrincipal;
+    private javax.swing.JLabel lb_tituloAyudaPrincipal;
+    private javax.swing.JLabel lb_versionAyudaPrincipal;
     // End of variables declaration//GEN-END:variables
+
+    private void setFonts() {
+        FontBSD fonts = new FontBSD();
+        lb_tituloAyudaPrincipal.setFont(fonts.getMyFont(1, 24));
+        lb_autorAyudaPrincipal.setFont(fonts.getMyFont(1, 18));
+        lb_fechaAyudaPrincipal.setFont(fonts.getMyFont(1, 18));
+        lb_versionAyudaPrincipal.setFont(fonts.getMyFont(1, 18));
+        lb_lenguajeAyudaPrincipal.setFont(fonts.getMyFont(1, 18));
+        lb_softwareAyudaPrincipal.setFont(fonts.getMyFont(1, 18));
+        btn_cerrarAyudaPrincipal.setFont(fonts.getMyFont(1, 18));
+    }
 }
