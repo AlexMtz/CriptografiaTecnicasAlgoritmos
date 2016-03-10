@@ -28,6 +28,9 @@ public class VistaPrincipal extends javax.swing.JFrame {
         btn_cribaPrincipal.addActionListener(controlador);
         btn_entropiaPrincipal.addActionListener(controlador);
         btn_minimoPrincipal.addActionListener(controlador);
+        btn_exponenciacionPrincipal.addActionListener(controlador);
+        btn_acercaPrincipal.addActionListener(controlador);
+        btn_salirPrincipal.addActionListener(controlador);
     }
 
     /**
