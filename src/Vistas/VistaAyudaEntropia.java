@@ -5,6 +5,11 @@
  */
 package Vistas;
 
+import Recursos.fuentes.FontBSD;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author ALEX
@@ -16,6 +21,12 @@ public class VistaAyudaEntropia extends javax.swing.JFrame {
      */
     public VistaAyudaEntropia() {
         initComponents();
+        //centramos la ventana
+        this.setLocationRelativeTo(null);
+        //Garantizamos el estilo y fuente de la ventana
+        setFonts();
+        //Agregamos el manejador al boton de la ventana
+        btn_cerrarVistaAyudaEntropia.addActionListener(new ControladorVistaAyudaEntropia(this));
     }
 
     /**
@@ -27,17 +38,91 @@ public class VistaAyudaEntropia extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btn_cerrarVistaAyudaEntropia = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(665, 265));
+
+        jLabel1.setFont(new java.awt.Font("BSD I Believe In Love", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel1.setText("Ayuda");
+
+        jLabel2.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel2.setText("Permite medir el contenido de la informacion.");
+
+        jLabel4.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel4.setText("conocemos las probabilidades de cada uno de los estados de X.");
+
+        jLabel5.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel5.setText("Es posible calcular la informacion contenida en una variable X si");
+
+        btn_cerrarVistaAyudaEntropia.setBackground(new java.awt.Color(243, 156, 18));
+        btn_cerrarVistaAyudaEntropia.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_cerrarVistaAyudaEntropia.setForeground(new java.awt.Color(240, 240, 240));
+        btn_cerrarVistaAyudaEntropia.setText("cerrar");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(128, 128, 128)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 48, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel4)))
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn_cerrarVistaAyudaEntropia)
+                        .addGap(283, 283, 283))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(280, 280, 280))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(btn_cerrarVistaAyudaEntropia)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -79,5 +164,54 @@ public class VistaAyudaEntropia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cerrarVistaAyudaEntropia;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+    /**
+     * Metodo que garantiza el tipo de fuente y estilo que se usa en la interfaz
+     * de la ventana sin importar el sistema operativo en el cual se utilize
+     */
+    private void setFonts() {
+        FontBSD fonts = new FontBSD();
+        jLabel1.setFont(fonts.getMyFont(1, 30));
+        jLabel2.setFont(fonts.getMyFont(1, 18));
+        jLabel4.setFont(fonts.getMyFont(1, 18));
+        jLabel5.setFont(fonts.getMyFont(1, 18));
+        btn_cerrarVistaAyudaEntropia.setFont(fonts.getMyFont(1, 18));
+    }
+}
+
+/**
+ * Clase que controla los eventos de la ventana de ayuda de la Entropia
+ * @author Yonathan Alexander Martinez Padilla
+ */
+class ControladorVistaAyudaEntropia implements ActionListener{
+    //Variable que hace referencia a la interfaz de la ayuda de la Entropia
+    private VistaAyudaEntropia vistaAyudaEntropia;
+    
+    /**
+     * Constructor de la clase de Ayuda de Entropia de Shannon
+     * @param vistaAyudaEntropia hace referencia a la ventana de la cual manejara 
+     * sus eventos
+     */
+    public ControladorVistaAyudaEntropia(VistaAyudaEntropia vistaAyudaEntropia){
+        this.vistaAyudaEntropia = vistaAyudaEntropia;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        //Obtenemos una referencia al boton del cual se genero el evento
+        JButton botonTemporal = (JButton) ae.getSource();
+        
+        //Identificamos el boton del cual se genero el evento
+        if(botonTemporal.getText().equalsIgnoreCase("cerrar")){
+            //Cerramos ésta ventana
+            vistaAyudaEntropia.dispose();
+        }
+    }
+    
 }

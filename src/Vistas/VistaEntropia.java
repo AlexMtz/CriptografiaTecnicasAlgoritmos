@@ -5,23 +5,50 @@
  */
 package Vistas;
 
+import Controladores.ControladorVistaEntropia;
 import Recursos.fuentes.FontBSD;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
  * @author ALEX
  */
 public class VistaEntropia extends javax.swing.JFrame {
-
+    //Creamos variables que refencien a las clases encargadas de manejar los eventos 
+    //de la interfaz
+    private ControladorVistaEntropia manejador = new ControladorVistaEntropia(this);
+    private ControladorJRadioButonsEntropia manejadorJRadioButton = new ControladorJRadioButonsEntropia(this);
+    
     /**
      * Creates new form VistaEntropia
      */
     public VistaEntropia() {
         initComponents();
+        //Agregamos los botones de radio a un grupo de botones
         btngroup_Entropia.add(rdnbtn_noEntropia);
         btngroup_Entropia.add(rdnbtn_siEntropia);
+        //centramos la ventana
         this.setLocationRelativeTo(null);
+        //Garantizamos el tipo de fuente y estilo que se utilizará en la interfaz
         setFonts();
+        //Deshabilitamos la opcion de editar el campo de texto de la solucion
+        txt_solucionEntropia.setEditable(false);
+        //Agregamos el manejador a cada uno de los botones de la interfaz
+        btn_ayudaEntropia.addActionListener(manejador);
+        btn_calcularEntropia.addActionListener(manejador);
+        btn_limpiarEntropia.addActionListener(manejador);
+        btn_regresarEntropia.addActionListener(manejador);
+        btn_siguienteEntropia.addActionListener(manejador);
+        rdnbtn_noEntropia.addActionListener(manejadorJRadioButton);
+        rdnbtn_siEntropia.addActionListener(manejadorJRadioButton);
+        //Hacemos clic en el boton de limpiarCampos para el primer uso
+        btn_limpiarEntropia.doClick();
     }
 
     /**
@@ -53,6 +80,7 @@ public class VistaEntropia extends javax.swing.JFrame {
         btn_regresarEntropia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(52, 152, 219));
 
@@ -83,7 +111,7 @@ public class VistaEntropia extends javax.swing.JFrame {
 
         lb_probabilidadEntropia.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
         lb_probabilidadEntropia.setForeground(new java.awt.Color(240, 240, 240));
-        lb_probabilidadEntropia.setText("probabilidad del estado ###:");
+        lb_probabilidadEntropia.setText("probabilidad del estado 1:");
 
         txt_probabilidadEntropia.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
         txt_probabilidadEntropia.setText("###");
@@ -273,7 +301,11 @@ public class VistaEntropia extends javax.swing.JFrame {
     private javax.swing.JTextField txt_probabilidadEntropia;
     private javax.swing.JTextArea txt_solucionEntropia;
     // End of variables declaration//GEN-END:variables
-
+    
+    /**
+     * Metodo que permite garantizar el tipo de fuente y estilo que se utilizara
+     * en la interfaz de la ventana sin importar el sistema operativo
+     */
     private void setFonts() {
         FontBSD fonts = new FontBSD();
         lb_tituloEntropia.setFont(fonts.getMyFont(1, 48));
@@ -292,4 +324,114 @@ public class VistaEntropia extends javax.swing.JFrame {
         rdnbtn_siEntropia.setFont(fonts.getMyFont(1, 18));
         rdnbtn_noEntropia.setFont(fonts.getMyFont(1, 18));
     }
+    /**
+     * Metodo que devuelve el boton calcular
+     * @return un objeto de tipo JButton
+     */
+    public JButton getBtn_calcularEntropia() {
+        return btn_calcularEntropia;
+    }
+    /**
+     * Metodo que devuelve el boton siguiente
+     * @return un objeto de tipo JButton
+     */
+    public JButton getBtn_siguienteEntropia() {
+        return btn_siguienteEntropia;
+    }
+    /**
+     * Metodo que devuelve la etiqueta de la informacion
+     * @return un objeto de tipo JLabel
+     */
+    public JLabel getLb_infoEntropia() {
+        return lb_infoEntropia;
+    }
+    /**
+     * Metodo que devuelve el radio buton no
+     * @return un objeto de tipo JRadioButton
+     */
+    public JRadioButton getRdnbtn_noEntropia() {
+        return rdnbtn_noEntropia;
+    }
+    /**
+     * Metodo que devuelve el radio buton si
+     * @return un objeto de tipo JRadioButton
+     */
+    public JRadioButton getRdnbtn_siEntropia() {
+        return rdnbtn_siEntropia;
+    }
+    /**
+     * Metodo que devuelve el campo de texto estados
+     * @return un objeto de tipo JTextField
+     */
+    public JTextField getTxt_estadosEntropia() {
+        return txt_estadosEntropia;
+    }
+    /**
+     * Metodo que devuelve el campo de texto probabilidad
+     * @return un objeto de tipo JTextField
+     */
+    public JTextField getTxt_probabilidadEntropia() {
+        return txt_probabilidadEntropia;
+    }
+    /**
+     * Metodo que devuelve el campo de texto solucion
+     * @return un objeto de tipo JTextArea
+     */
+    public JTextArea getTxt_solucionEntropia() {
+        return txt_solucionEntropia;
+    }
+    /**
+     * Metodo que devuleve la etiqueta de probabilidad
+     * @return un objeto de tipo JLabel
+     */
+    public JLabel getLb_probabilidadEntropia() {
+        return lb_probabilidadEntropia;
+    }
+    
+}
+/**
+ * Clase que maneja los eventos de los JRadioButton´s de la interfaz implementa
+ * ActionListener
+ * @author Yonathan Alexander Martínez Padilla
+ */
+class ControladorJRadioButonsEntropia implements ActionListener{
+    //Creamos una variable para guardar la referencia a la clase de la que estamos
+    //manejando sus eventos
+    private VistaEntropia vistaEntropia;
+    
+    /**
+     * Constructor de la clase
+     * @param vistaEntropia corresponde a la ventana de la cual se manejan los
+     * eventos
+     */
+    public ControladorJRadioButonsEntropia(VistaEntropia vistaEntropia){
+        this.vistaEntropia = vistaEntropia;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        //Obtenemos la referencia al radio buton que se hizo clic
+        JRadioButton botonTemporal = (JRadioButton) ae.getSource();
+        
+        //Identificamos desde cual boton se genero el evento
+        if(botonTemporal.getText().equalsIgnoreCase("si")){
+            //Activamos el boton de calcular
+            vistaEntropia.getBtn_calcularEntropia().setEnabled(true);
+            //Desactivamos las opciones de probabilidad
+            vistaEntropia.getRdnbtn_noEntropia().setEnabled(false);
+            vistaEntropia.getRdnbtn_siEntropia().setEnabled(false);
+        }
+        
+        if(botonTemporal.getText().equalsIgnoreCase("no")){
+            //Hacemos visible el boton de siguiente, la etiqueta de probabilidad
+            //y el campo de texto de probabilidad
+            vistaEntropia.getBtn_siguienteEntropia().setVisible(true);
+            vistaEntropia.getTxt_probabilidadEntropia().setVisible(true);
+            vistaEntropia.getLb_probabilidadEntropia().setVisible(true);
+            //Deshabilitamos los botones del grupo
+            vistaEntropia.getRdnbtn_noEntropia().setEnabled(false);
+            vistaEntropia.getRdnbtn_siEntropia().setEnabled(false);
+        }
+    }
+    
 }
