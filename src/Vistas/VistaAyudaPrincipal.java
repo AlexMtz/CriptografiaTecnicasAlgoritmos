@@ -12,7 +12,7 @@ import javax.swing.JButton;
 
 /**
  *
- * @author ALEX
+ * @author Yonathan Alexander Martínez Padilla
  */
 public class VistaAyudaPrincipal extends javax.swing.JFrame {
     ManejadorBotonesVistaAyuda manejador = new ManejadorBotonesVistaAyuda(this);
@@ -22,8 +22,11 @@ public class VistaAyudaPrincipal extends javax.swing.JFrame {
      */
     public VistaAyudaPrincipal() {
         initComponents();
+        //Centramos la interfaz
         this.setLocationRelativeTo(null);
+        //Aseguramos el tipo de fuente e interfaz
         setFonts();
+        //Asignamos el controlador al boton de la interfaz
         btn_cerrarAyudaPrincipal.addActionListener(manejador);
     }
 
@@ -201,7 +204,12 @@ public class VistaAyudaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lb_tituloAyudaPrincipal;
     private javax.swing.JLabel lb_versionAyudaPrincipal;
     // End of variables declaration//GEN-END:variables
-
+    
+    /**
+     * Metodo setFonts define el tipo y estilo de fuente que se utilizará en la
+     * interfaz AyudaPrincipal, ésto para garantizar el tipo de fuente y estilo
+     * independientemente del sistema operativo
+     */
     private void setFonts() {
         FontBSD fonts = new FontBSD();
         lb_tituloAyudaPrincipal.setFont(fonts.getMyFont(1, 24));
@@ -214,20 +222,41 @@ public class VistaAyudaPrincipal extends javax.swing.JFrame {
     }
 }
 
+/**
+ * Clase manejadora de eventos implementa ActionListener
+ * @author Yonathan Alexander Martínez Padilla
+ */
 class ManejadorBotonesVistaAyuda implements ActionListener{
-
+    //variable que permite controlar la ventana (interfaz) a la que está asociada
     private VistaAyudaPrincipal vistaAyudaPrincipal;
     
+    /**
+     * Constructor de la clase, recibe como parametro la ventana a la cual está
+     * controlando
+     * @param vistaAyudaPrincipal corresponde a la clase der la cual controla sus
+     * botones
+     */
     public  ManejadorBotonesVistaAyuda(VistaAyudaPrincipal vistaAyudaPrincipal){
         this.vistaAyudaPrincipal = vistaAyudaPrincipal;
     }
+    /**
+     * Metodo que se ejecuta al realizar un evento en el boton, es un metodo
+     * sobrescrito de la clase ActionListener
+     * @param ae es el evento que se genera al hacer clic en el boton
+     */
     @Override
     public void actionPerformed(ActionEvent ae) {
+        //Obtenemos la instancia del boton al que se le hizo clic
         JButton botonTemporal = (JButton) ae.getSource();
+        
+        //Revisamos a cual boton se le hizo clic
         if(botonTemporal.getText().equalsIgnoreCase("cerrar")){
+            //generamos una nueva instancia de la interfaz que mostraremos enseguida
             VistaPrincipal vistaPrincipal = new VistaPrincipal();
             vistaPrincipal.setLocationRelativeTo(null);
+            //hacemos visible nuestra interfaz
             vistaPrincipal.setVisible(true);
+            //Ocultamos la interfaz actual
             vistaAyudaPrincipal.dispose();
         }
     }

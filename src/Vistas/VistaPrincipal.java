@@ -13,6 +13,7 @@ import Recursos.fuentes.FontBSD;
  * @author Yonathan A. Martínez Padilla
  */
 public class VistaPrincipal extends javax.swing.JFrame {
+    //Variable que controla los botones de la interfaz principal
     private ControladorVistaPrincipal controlador = 
             new ControladorVistaPrincipal(this);
 
@@ -21,8 +22,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
      */
     public VistaPrincipal() {
         initComponents();
+        //Se centraliza la ventana
         this.setLocationRelativeTo(null);
+        //Aseguramos el tipo de fuente y estilo en cada uno de los botones de la
+        //interfaz
         setFonts();
+        //Asignamos el controlador de eventos a cada uno de los botones de la
+        //interfaz
         btn_algoritmoPrincipal.addActionListener(controlador);
         btn_congruenciaPrincipal.addActionListener(controlador);
         btn_cribaPrincipal.addActionListener(controlador);
@@ -227,7 +233,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lb_tituloPrincipal;
     // End of variables declaration//GEN-END:variables
-
+    
+    /**
+     * Metodo setFonts que garantiza el tipo de fuente y estilo en cada uno de los
+     * botones y etiquetas de la interfaz independientemente del sistema operativo
+     */
     private void setFonts() {
         FontBSD fonts = new FontBSD();
         lb_tituloPrincipal.setFont(fonts.getMyFont(1, 48));
