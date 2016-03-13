@@ -5,21 +5,42 @@
  */
 package Vistas;
 
+import Controladores.ControladorVistaExponenciacion;
 import Recursos.fuentes.FontBSD;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
- * @author ALEX
+ * @author Yonathan Alexander Martinez Padilla
  */
 public class VistaExponenciacion extends javax.swing.JFrame {
+    //Creamos una variable que referencie al controlador de la clase
+    private ControladorVistaExponenciacion manejador = new ControladorVistaExponenciacion(this);
 
     /**
      * Creates new form VistaExponenciacion
      */
     public VistaExponenciacion() {
         initComponents();
+        //centramos la ventana
         this.setLocationRelativeTo(null);
+        //Garantizamso el tipo de fuente
         setFonts();
+        //Agregamos las opciones de metodos a un grupo de radio butons
+        grupo_BotonesMetodos.add(rdnbtn_binarioExponenciacion);
+        grupo_BotonesMetodos.add(rdnbtn_clasicoExponenciacion);
+        //Dehabilitamos la opcion de editar el campo de la solucion
+        txt_solucionExponenciacion.setEditable(false);
+        //Asocioamos el manejador a cada uno de los botones
+        btn_calcularExponenciacion.addActionListener(manejador);
+        btn_ayudaExponenciacion.addActionListener(manejador);
+        btn_limpiarExponenciacion.addActionListener(manejador);
+        btn_regresarExponenciacion.addActionListener(manejador);
+        //Hacemos clic en limpiar para inicializar nuestrao campos
+        btn_limpiarExponenciacion.doClick();
     }
 
     /**
@@ -31,6 +52,7 @@ public class VistaExponenciacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        grupo_BotonesMetodos = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         lb_tituloExponenciacion = new javax.swing.JLabel();
         lb_baseExponenciacion = new javax.swing.JLabel();
@@ -50,6 +72,7 @@ public class VistaExponenciacion extends javax.swing.JFrame {
         btn_regresarExponenciacion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(52, 152, 219));
 
@@ -251,6 +274,7 @@ public class VistaExponenciacion extends javax.swing.JFrame {
     private javax.swing.JButton btn_calcularExponenciacion;
     private javax.swing.JButton btn_limpiarExponenciacion;
     private javax.swing.JButton btn_regresarExponenciacion;
+    private javax.swing.ButtonGroup grupo_BotonesMetodos;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lb_baseExponenciacion;
@@ -265,7 +289,10 @@ public class VistaExponenciacion extends javax.swing.JFrame {
     private javax.swing.JTextField txt_moduloExponenciacion;
     private javax.swing.JTextArea txt_solucionExponenciacion;
     // End of variables declaration//GEN-END:variables
-
+    /**
+     * Este metodo garantiza el estilo y tipo de fuente de la interfaz
+     * independientemente del sistema operativo
+     */
     private void setFonts() {
         FontBSD fonts = new FontBSD();
         lb_tituloExponenciacion.setFont(fonts.getMyFont(1, 48));
@@ -282,4 +309,55 @@ public class VistaExponenciacion extends javax.swing.JFrame {
         btn_limpiarExponenciacion.setFont(fonts.getMyFont(1, 18));
         btn_ayudaExponenciacion.setFont(fonts.getMyFont(1, 18));
     }
+    /**
+     * Metodo que devuelve la etiqueta de informacion
+     * @return un objeto JLabel con la etiqueta de la informacion
+     */
+    public JLabel getLb_infoExponenciacion() {
+        return lb_infoExponenciacion;
+    }
+    /**
+     * Metodo que devuelve un radio buton de la opcion del metodo binario
+     * @return un objeto JRadioButton que corresponde al metodo binario
+     */
+    public JRadioButton getRdnbtn_binarioExponenciacion() {
+        return rdnbtn_binarioExponenciacion;
+    }
+    /**
+     * Metodo que devuelve un radio buton de la opcion del metodo clasico
+     * @return un objeto JRadioButton que corresponde al metodo clasico
+     */
+    public JRadioButton getRdnbtn_clasicoExponenciacion() {
+        return rdnbtn_clasicoExponenciacion;
+    }
+    /**
+     * Metodo que devuelve un campo de texto de la base del exponente
+     * @return un objeto JTextField que corresponde a la base del exponente
+     */
+    public JTextField getTxt_baseExponenciacion() {
+        return txt_baseExponenciacion;
+    }
+    /**
+     * Metodo que devuelve un campo de texto del exponente de la base
+     * @return un objeto JTextField que corresponde al exponente de la base
+     */
+    public JTextField getTxt_exponenciacionExponenciacion() {
+        return txt_exponenciacionExponenciacion;
+    }
+    /**
+     * Metodo que devuelve un campo de texto del modulo que se desea calcular
+     * @return un objeto JTextField que corresponde al modulo de la operacion
+     */
+    public JTextField getTxt_moduloExponenciacion() {
+        return txt_moduloExponenciacion;
+    }
+    /**
+     * Metodo que devuelve un area de texto de la solucicon de la exponenciacion
+     * @return un objeto JTextArea que corresponde a la solucion de la exponenciacion
+     */
+    public JTextArea getTxt_solucionExponenciacion() {
+        return txt_solucionExponenciacion;
+    }
+    
+    
 }
