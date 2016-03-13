@@ -5,21 +5,40 @@
  */
 package Vistas;
 
+import Controladores.ControladorVistaMinimo;
 import Recursos.fuentes.FontBSD;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
- *
- * @author ALEX
+ * Clase que muestra la interfaz del Minimo Comun Divisor
+ * extiende de JFrame
+ * @author Yonathan Alexander Martínez Padilla
  */
 public class VistaMinimo extends javax.swing.JFrame {
+    //Creamos una variable de tipo ControladorVistaMinimo que nos permita manejar
+    //los eventos de los botones de la interfaz VistaMinimo
+    ControladorVistaMinimo manejador = new ControladorVistaMinimo(this);
 
     /**
      * Creates new form VistaMinimo
      */
     public VistaMinimo() {
         initComponents();
+        //Se centraliza la interfaz
         this.setLocationRelativeTo(null);
+        //Se establece el estilo y tipo de fuente
         setFonts();
+        //Invalidamos la edicion para el campo del resultado
+        txt_resultadoMinimo.setEditable(false);
+        //Agregamos el controlador a cada boton de nuestra interfaz
+        btn_calcularMinimo.addActionListener(manejador);
+        btn_ayudaMinimo.addActionListener(manejador);
+        btn_limpiarMinimo.addActionListener(manejador);
+        btn_regresarMinimo.addActionListener(manejador);
+        //limpiamos los campos para prepararlos para el primer uso
+        manejador.limpiarCampos();
     }
 
     /**
@@ -232,7 +251,10 @@ public class VistaMinimo extends javax.swing.JFrame {
     private javax.swing.JTextField txt_bMinimo;
     private javax.swing.JTextArea txt_resultadoMinimo;
     // End of variables declaration//GEN-END:variables
-
+    /**
+     * Metodo que establece el tipo de fuente y estilo de los componentes de la
+     * interfaz, esto independientemente del sistema operativo
+     */
     private void setFonts() {
         FontBSD fonts = new FontBSD();
         lb_tituloMinimo.setFont(fonts.getMyFont(1, 48));
@@ -247,5 +269,36 @@ public class VistaMinimo extends javax.swing.JFrame {
         btn_regresarMinimo.setFont(fonts.getMyFont(1, 18));
         btn_limpiarMinimo.setFont(fonts.getMyFont(1, 18));
         btn_ayudaMinimo.setFont(fonts.getMyFont(1, 18));
+    }
+    /**
+     * Metodo que devuelve la etiqueta de la informacion
+     * @return un objeto de tipo JLabel con la etiqueta de la informacion
+     */
+    public JLabel getLb_infoMinimo() {
+        return lb_infoMinimo;
+    }
+    
+    /**
+     * Metodo que devuelve el campo del valor a
+     * @return un objeto de JTextField con el campo del valor a
+     */
+    public JTextField getTxt_aMinimo() {
+        return txt_aMinimo;
+    }
+    
+    /**
+     * Metodo que devuelve el campo del valor b
+     * @return un objeto de JTextField con el campo del valor b
+     */
+    public JTextField getTxt_bMinimo() {
+        return txt_bMinimo;
+    }
+    
+    /**
+     * Metodo que devuelve el campo del valor resultado
+     * @return un objeto de JTextField con el campo del valor resultado
+     */
+    public JTextArea getTxt_resultadoMinimo() {
+        return txt_resultadoMinimo;
     }
 }

@@ -25,6 +25,8 @@ public class VistaAyudaMínimo extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         //Garantizamos el tipo de fuente y estilo
         setFonts();
+        //agregamos el controlador del boton cerrar
+        btn_ayudaMinimo.addActionListener(new ManejadorBotonesAyudaMinimo(this));
     }
 
     /**
