@@ -6,12 +6,16 @@
 package Vistas;
 
 import Recursos.fuentes.FontBSD;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
  * @author ALEX
  */
 public class VistaAyudaPrincipal extends javax.swing.JFrame {
+    ManejadorBotonesVistaAyuda manejador = new ManejadorBotonesVistaAyuda(this);
 
     /**
      * Creates new form VistaAyudaPrincipal
@@ -20,6 +24,7 @@ public class VistaAyudaPrincipal extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setFonts();
+        btn_cerrarAyudaPrincipal.addActionListener(manejador);
     }
 
     /**
@@ -207,4 +212,24 @@ public class VistaAyudaPrincipal extends javax.swing.JFrame {
         lb_softwareAyudaPrincipal.setFont(fonts.getMyFont(1, 18));
         btn_cerrarAyudaPrincipal.setFont(fonts.getMyFont(1, 18));
     }
+}
+
+class ManejadorBotonesVistaAyuda implements ActionListener{
+
+    private VistaAyudaPrincipal vistaAyudaPrincipal;
+    
+    public  ManejadorBotonesVistaAyuda(VistaAyudaPrincipal vistaAyudaPrincipal){
+        this.vistaAyudaPrincipal = vistaAyudaPrincipal;
+    }
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        JButton botonTemporal = (JButton) ae.getSource();
+        if(botonTemporal.getText().equalsIgnoreCase("cerrar")){
+            VistaPrincipal vistaPrincipal = new VistaPrincipal();
+            vistaPrincipal.setLocationRelativeTo(null);
+            vistaPrincipal.setVisible(true);
+            vistaAyudaPrincipal.dispose();
+        }
+    }
+    
 }
