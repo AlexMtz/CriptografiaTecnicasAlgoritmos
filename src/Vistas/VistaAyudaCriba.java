@@ -5,17 +5,28 @@
  */
 package Vistas;
 
+import Recursos.fuentes.FontBSD;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
- * @author ALEX
+ * @author Yonathan Alexander Martínez Padilla
  */
 public class VistaAyudaCriba extends javax.swing.JFrame {
-
+private ControladorVistaAyudaCriba manejador = new ControladorVistaAyudaCriba(this);
     /**
      * Creates new form VistaAyudaCriba
      */
     public VistaAyudaCriba() {
         initComponents();
+        //Centrar ventana
+        this.setLocationRelativeTo(null);
+        //Garantizar el estilo
+        setFonts();
+        //Agregar los controladores
+        btn_cerrarAyudaCriba.addActionListener(manejador);
     }
 
     /**
@@ -27,17 +38,157 @@ public class VistaAyudaCriba extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        btn_cerrarAyudaCriba = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(630, 460));
+
+        jLabel1.setFont(new java.awt.Font("BSD I Believe In Love", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel1.setText("Ayuda");
+
+        jLabel2.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel2.setText("Es un algoritmo que permite encontrar numeros primos menores");
+
+        jLabel3.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel3.setText("menores que un numero natural dado. Partimos de una lista");
+
+        jLabel4.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel4.setText("de numeros que van de 2 hasta un determinado numero.");
+
+        jLabel5.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel5.setText("Eliminamos de la lista los multiplos de 2. Luego tomamos el");
+
+        jLabel6.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel6.setText("primer numero despues del 2 que no fue eliminado (el 3) y");
+
+        jLabel7.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel7.setText("eliminamos de la lista sus multiplos, y asi sucesivamente.");
+
+        jLabel8.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel8.setText("El proceso termina cuando el cuadrado del mayor numero");
+
+        jLabel9.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel9.setText("confirmado como primo es menor que el numero final de la lista.");
+
+        jLabel10.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel10.setText("Los numeros que permanecen en la lista son los primos.");
+
+        btn_cerrarAyudaCriba.setBackground(new java.awt.Color(248, 196, 113));
+        btn_cerrarAyudaCriba.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        btn_cerrarAyudaCriba.setForeground(new java.awt.Color(240, 240, 240));
+        btn_cerrarAyudaCriba.setText("cerrar");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel10)
+                        .addGap(85, 159, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(1, 1, 1)
+                                    .addComponent(jLabel2))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(11, 11, 11)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel3)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel5)
+                                    .addGap(56, 56, 56)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel6)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(jLabel9)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel8))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(294, 294, 294)
+                .addComponent(btn_cerrarAyudaCriba)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(btn_cerrarAyudaCriba)
+                .addGap(24, 24, 24))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 709, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +230,67 @@ public class VistaAyudaCriba extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cerrarAyudaCriba;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+    
+    /**
+     * Metodo que garantiza el estilo y tipo de fuente de una interfaz 
+     * independientemente del sistema operativo
+     */
+    private void setFonts() {
+        FontBSD fonts = new FontBSD();
+        jLabel1.setFont(fonts.getMyFont(1, 30));
+        jLabel10.setFont(fonts.getMyFont(1, 18));
+        jLabel2.setFont(fonts.getMyFont(1, 18));
+        jLabel3.setFont(fonts.getMyFont(1, 18));
+        jLabel4.setFont(fonts.getMyFont(1, 18));
+        jLabel5.setFont(fonts.getMyFont(1, 18));
+        jLabel6.setFont(fonts.getMyFont(1, 18));
+        jLabel7.setFont(fonts.getMyFont(1, 18));
+        jLabel8.setFont(fonts.getMyFont(1, 18));
+        jLabel9.setFont(fonts.getMyFont(1, 18));
+        btn_cerrarAyudaCriba.setFont(fonts.getMyFont(1, 18));
+    }
 }
+/**
+ * Clase que controla los eventos de la ventana de ayuda de la Criba
+ * @author Yonathan Alexander Martinez Padilla
+ */
+class ControladorVistaAyudaCriba implements ActionListener{
+    //Variable que hace referencia a la interfaz de la ayuda de la Entropia
+    private VistaAyudaCriba vistaAyudaCriba;
+    
+    /**
+     * Constructor de la clase de Ayuda de Entropia de Shannon
+     * @param vistaAyudaEntropia hace referencia a la ventana de la cual manejara 
+     * sus eventos
+     */
+    public ControladorVistaAyudaCriba(VistaAyudaCriba vistaAyudaCriba){
+        this.vistaAyudaCriba = vistaAyudaCriba;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        //Obtenemos una referencia al boton del cual se genero el evento
+        JButton botonTemporal = (JButton) ae.getSource();
+        
+        //Identificamos el boton del cual se genero el evento
+        if(botonTemporal.getText().equalsIgnoreCase("cerrar")){
+            //Cerramos ésta ventana
+            vistaAyudaCriba.dispose();
+        }
+    }
+    
+}
+

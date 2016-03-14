@@ -5,21 +5,38 @@
  */
 package Vistas;
 
+import Controladores.ControladorVistaCriba;
 import Recursos.fuentes.FontBSD;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
  * @author ALEX
  */
 public class VistaCriba extends javax.swing.JFrame {
+    //Creamos una variable que referencie al manejador de la interfaz
+    ControladorVistaCriba manejador = new ControladorVistaCriba(this);
 
     /**
      * Creates new form VistaCriba
      */
     public VistaCriba() {
         initComponents();
+        //Centramos la ventana
         this.setLocationRelativeTo(null);
+        //Garantizamos el estilo y el tipo de fuente de la interfaz
         setFonts();
+        //Deshabilitamos la edicion del area de texto de la solucion
+        txt_solucionCriba.setEditable(false);
+        //agregamos el manejador de eventos a los botones de la interfaz
+        btn_cribarCriba.addActionListener(manejador);
+        btn_limpiarCriba.addActionListener(manejador);
+        btn_regresarCriba.addActionListener(manejador);
+        btn_ayudaCriba.addActionListener(manejador);
+        //Hacemos clic en el boton de limpiar
+        btn_limpiarCriba.doClick();
     }
 
     /**
@@ -44,6 +61,7 @@ public class VistaCriba extends javax.swing.JFrame {
         btn_regresarCriba = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(52, 152, 219));
 
@@ -223,5 +241,26 @@ public class VistaCriba extends javax.swing.JFrame {
         btn_regresarCriba.setFont(fonts.getMyFont(1, 18));
         btn_limpiarCriba.setFont(fonts.getMyFont(1, 18));
         btn_ayudaCriba.setFont(fonts.getMyFont(1, 18));
+    }
+    /**
+     * Metodo que devuelve la etiqueta de la info
+     * @return un objeto de tipo JLabel
+     */
+    public JLabel getLb_infoCriba() {
+        return lb_infoCriba;
+    }
+    /**
+     * Metodo que devuelve el campo de texto del numero de Criba
+     * @return un objeto de JTextField
+     */
+    public JTextField getTxt_numeroCriba() {
+        return txt_numeroCriba;
+    }
+    /**
+     * Metodo que devuelve el campo de texto de la solucion
+     * @return un objeto de tipo JTextField
+     */
+    public JTextArea getTxt_solucionCriba() {
+        return txt_solucionCriba;
     }
 }
