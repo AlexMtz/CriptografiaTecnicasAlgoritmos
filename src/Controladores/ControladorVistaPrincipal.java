@@ -5,7 +5,7 @@
  */
 package Controladores;
 
-import Vistas.VistaAlgoritmo;
+import Vistas.VistaModuloInverso;
 import Vistas.VistaAyudaPrincipal;
 import Vistas.VistaCongruencia;
 import Vistas.VistaCriba;
@@ -43,9 +43,9 @@ public class ControladorVistaPrincipal implements ActionListener{
         
         //Identificamos desde que boton se genero el evento
         
-        if(botonClic.getText().equalsIgnoreCase("Algoritmo Extendido de Euler")){
+        if(botonClic.getText().equalsIgnoreCase("Modulo Inverso")){
             //Abrimos la ventana del algoritmo extendido
-            VistaAlgoritmo algoritmo = new VistaAlgoritmo();
+            VistaModuloInverso algoritmo = new VistaModuloInverso();
             //la hacemos visible
             algoritmo.setVisible(true);
         }

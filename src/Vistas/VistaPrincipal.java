@@ -71,7 +71,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         btn_algoritmoPrincipal.setBackground(new java.awt.Color(243, 156, 18));
         btn_algoritmoPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
         btn_algoritmoPrincipal.setForeground(new java.awt.Color(240, 240, 240));
-        btn_algoritmoPrincipal.setText("Algoritmo Extendido de Euler");
+        btn_algoritmoPrincipal.setText("Modulo Inverso");
 
         btn_congruenciaPrincipal.setBackground(new java.awt.Color(243, 156, 18));
         btn_congruenciaPrincipal.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
@@ -120,17 +120,18 @@ public class VistaPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(413, 413, 413)
                         .addComponent(btn_exponenciacionPrincipal))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(379, 379, 379)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lb_tituloPrincipal)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btn_algoritmoPrincipal)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(40, 40, 40)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(btn_entropiaPrincipal)
-                                        .addComponent(btn_cribaPrincipal)))))))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(419, 419, 419)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btn_entropiaPrincipal)
+                                .addComponent(btn_cribaPrincipal)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGap(379, 379, 379)
+                            .addComponent(lb_tituloPrincipal))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(445, 445, 445)
+                            .addComponent(btn_algoritmoPrincipal))))
                 .addContainerGap(392, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
