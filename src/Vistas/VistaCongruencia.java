@@ -5,21 +5,37 @@
  */
 package Vistas;
 
+import Controladores.ControladorVistaCongruencia;
 import Recursos.fuentes.FontBSD;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
- * @author ALEX
+ * @author Yonathan Alexander Martinez Padilla
  */
 public class VistaCongruencia extends javax.swing.JFrame {
-
+    private ControladorVistaCongruencia manejador = new ControladorVistaCongruencia(this);
+    
     /**
      * Creates new form VistaCongruencia
      */
     public VistaCongruencia() {
         initComponents();
+        //Centramos la ventana
         this.setLocationRelativeTo(null);
+        //Garantizamos el estilo y la fuente de la ventana
         setFonts();
+        //Desactivamos la opcion de editar el campo de texto de la solucion
+        txt_solucionCongruencia.setEditable(false);
+        //Agregamos el controlador a cada uno de los botones
+        btn_ayudaCongruencia.addActionListener(manejador);
+        btn_calcularCongruencia.addActionListener(manejador);
+        btn_limpiarCongruencia.addActionListener(manejador);
+        btn_regresarCongruencia.addActionListener(manejador);
+        //Hacemos clic en el boton limpiar para el primer uso
+        btn_limpiarCongruencia.doClick();
     }
 
     /**
@@ -45,6 +61,8 @@ public class VistaCongruencia extends javax.swing.JFrame {
         btn_ayudaCongruencia = new javax.swing.JButton();
         btn_limpiarCongruencia = new javax.swing.JButton();
         btn_regresarCongruencia = new javax.swing.JButton();
+        lb_moduloCongruencia = new javax.swing.JLabel();
+        txt_moduloCongruencia = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -101,34 +119,17 @@ public class VistaCongruencia extends javax.swing.JFrame {
         btn_regresarCongruencia.setForeground(new java.awt.Color(240, 240, 240));
         btn_regresarCongruencia.setText("regresar");
 
+        lb_moduloCongruencia.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        lb_moduloCongruencia.setForeground(new java.awt.Color(240, 240, 240));
+        lb_moduloCongruencia.setText("modulo:");
+
+        txt_moduloCongruencia.setFont(new java.awt.Font("BSD I Believe In Love", 1, 18)); // NOI18N
+        txt_moduloCongruencia.setText("###");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(393, 393, 393)
-                        .addComponent(lb_tituloCongruencia))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
-                        .addComponent(lb_aCongruencia)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_aCongruencia, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lb_bCongruencia)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_bCongruencia, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lb_esCongruencia))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(497, 497, 497)
-                        .addComponent(btn_calcularCongruencia)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 167, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(139, 139, 139))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lb_infoCongruencia)
@@ -139,6 +140,34 @@ public class VistaCongruencia extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btn_ayudaCongruencia)
                 .addGap(47, 47, 47))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 167, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(139, 139, 139))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(393, 393, 393)
+                        .addComponent(lb_tituloCongruencia))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(497, 497, 497)
+                        .addComponent(btn_calcularCongruencia))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(lb_aCongruencia)
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_aCongruencia, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lb_bCongruencia)
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_bCongruencia, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lb_moduloCongruencia)
+                        .addGap(12, 12, 12)
+                        .addComponent(txt_moduloCongruencia, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lb_esCongruencia)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,7 +180,9 @@ public class VistaCongruencia extends javax.swing.JFrame {
                     .addComponent(txt_aCongruencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lb_bCongruencia)
                     .addComponent(txt_bCongruencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lb_esCongruencia))
+                    .addComponent(lb_esCongruencia)
+                    .addComponent(lb_moduloCongruencia)
+                    .addComponent(txt_moduloCongruencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btn_calcularCongruencia)
                 .addGap(26, 26, 26)
@@ -233,25 +264,69 @@ public class VistaCongruencia extends javax.swing.JFrame {
     private javax.swing.JLabel lb_bCongruencia;
     private javax.swing.JLabel lb_esCongruencia;
     private javax.swing.JLabel lb_infoCongruencia;
+    private javax.swing.JLabel lb_moduloCongruencia;
     private javax.swing.JLabel lb_tituloCongruencia;
     private javax.swing.JTextField txt_aCongruencia;
     private javax.swing.JTextField txt_bCongruencia;
+    private javax.swing.JTextField txt_moduloCongruencia;
     private javax.swing.JTextArea txt_solucionCongruencia;
     // End of variables declaration//GEN-END:variables
-
+    /**
+     * Metodo que garantiza el estilo y tipo de fuente de la interfaz, independientemente 
+     * del sistema operativo
+     */
     private void setFonts() {
         FontBSD fonts = new FontBSD();
         lb_tituloCongruencia.setFont(fonts.getMyFont(1, 48));
         lb_aCongruencia.setFont(fonts.getMyFont(1, 18));
         lb_bCongruencia.setFont(fonts.getMyFont(1, 18));
         lb_esCongruencia.setFont(fonts.getMyFont(1, 18));
+        lb_moduloCongruencia.setFont(fonts.getMyFont(1, 18));
         lb_infoCongruencia.setFont(fonts.getMyFont(1, 14));
         txt_aCongruencia.setFont(fonts.getMyFont(1, 18));
         txt_bCongruencia.setFont(fonts.getMyFont(1, 18));
         txt_solucionCongruencia.setFont(fonts.getMyFont(1, 18));
+        txt_moduloCongruencia.setFont(fonts.getMyFont(1, 18));
         btn_calcularCongruencia.setFont(fonts.getMyFont(1, 18));
         btn_regresarCongruencia.setFont(fonts.getMyFont(1, 18));
         btn_limpiarCongruencia.setFont(fonts.getMyFont(1, 18));
         btn_ayudaCongruencia.setFont(fonts.getMyFont(1, 18));
     }
+    /**
+     * Metodo que devuelve la etiqueta de la informacion
+     * @return un objeto de tipo JLabel
+     */
+    public JLabel getLb_infoCongruencia() {
+        return lb_infoCongruencia;
+    }
+    /**
+     * Metodo que devuelve el campo de texto del valor a
+     * @return un objeto de tipo JTextField
+     */
+    public JTextField getTxt_aCongruencia() {
+        return txt_aCongruencia;
+    }
+    /**
+     * Metodo que devuelve el campo de texto del valor b
+     * @return un objeto de tipo JTextField
+     */
+    public JTextField getTxt_bCongruencia() {
+        return txt_bCongruencia;
+    }
+    /**
+     * Metodo que devuelve el campo de texto de la solucion
+     * @return un objeto de tipo JTextArea
+     */
+    public JTextArea getTxt_solucionCongruencia() {
+        return txt_solucionCongruencia;
+    }
+    /**
+     * Metodo que devuelve el campo de texto del modulo
+     * @return un objeto de tipo JTextField
+     */
+    public JTextField getTxt_moduloCongruencia() {
+        return txt_moduloCongruencia;
+    }
+    
+    
 }
