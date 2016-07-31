@@ -7,12 +7,14 @@ package Modelos;
 
 /**
  *
- * @author ALEX
+ * @author YONATHAN MARTINEZ
  */
 public class Congruencia {
     private String procedimeinto = "";
     private boolean esCongruente;
-    
+    /**
+    * éste es un comentario de prueba
+    */
     public void calcularCongruencia(int a, int b, int m){
         informarCambios("calculando a mod m ");
         double tempA = a % m;
