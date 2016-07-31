@@ -7,7 +7,7 @@ package Modelos;
 
 /**
  *
- * @author ALEX
+ * @author YONATHAN PADILLA
  */
 public class ModuloInverso {
     
